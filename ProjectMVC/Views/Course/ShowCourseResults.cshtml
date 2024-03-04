@@ -1,0 +1,40 @@
+﻿@model List<AllTrainersAndAllCoursesAndCourseResultsViewModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Trainer Degree</th>
+            <th scope="col">Minimum Degree</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AllTrainersAndAllCoursesAndCourseResultsViewModel item in Model)
+        {
+            <tr>
+                <th scope="row">@item.NameTrainer</th>
+                <th scope="row">
+                    <img src="~/images/@item.imageTrainer" class="card-img-top" alt="...">
+                </th>
+                <td  style="color: @item.Color">@item.DegreeTrainer</td>
+                <td>@item.MinDegree</td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<a href="http://localhost:5117/Course/All" class="link list-group-item list-group-item-action btn btn-primary">Back</a>
+<style>
+    .card-img-top {
+        width: 150px;
+        height: 150px;
+    }
+    .link{
+    text-align:center;
+    font-size:25px;
+    font-weight:bold;
+    }
+</style>

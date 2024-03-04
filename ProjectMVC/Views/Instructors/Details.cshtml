@@ -1,0 +1,19 @@
+﻿@model Instructor
+
+<div class="card" style="width: 18rem;">
+    <img src="~/images/@Model.Image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">@Model.Name</h5>
+    <p class="card-text">@Model.Address</p>
+    <p class="card-text">@Model.Salary</p>
+        <a href="http://localhost:5117/Instructors/All" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<style>
+    .card-img-top {
+        width: 200px;
+        height: 200px;
+    }
+
+</style>

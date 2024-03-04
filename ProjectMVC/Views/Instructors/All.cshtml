@@ -1,0 +1,41 @@
+﻿@model List<Instructor>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Address</th>
+            <th scope="col">DepartName</th>
+            <th scope="col">Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Instructor item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Name</th>
+                <td>
+                    <img src="~/images/@item.Image" class="card-img-top" alt="...">
+                    </td>
+                <td>@item.Salary</td>
+                <td>@item.Address</td>
+                <td>@item.Department.Name</td>
+                <td>
+                    <a href="Details/@item.Id" class="btn btn-success">Details</a>
+                </td>
+            </tr>
+        }
+        
+       
+    </tbody>
+</table>
+
+<style>
+    .card-img-top{
+    width:200px;
+    height:200px;
+    }
+
+</style>

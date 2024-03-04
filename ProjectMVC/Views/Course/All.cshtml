@@ -1,0 +1,25 @@
+﻿@model List<Course>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Degree</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Course item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Name</th>
+                <td>@item.Degree</td>
+                <td>
+                    <a href="ShowCourseResults/@item.Id" class="btn btn-success">Details</a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
